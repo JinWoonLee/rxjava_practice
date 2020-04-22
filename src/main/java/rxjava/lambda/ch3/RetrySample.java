@@ -1,6 +1,5 @@
 package rxjava.lambda.ch3;
 
-import com.sun.javafx.binding.StringFormatter;
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
 import lombok.extern.slf4j.Slf4j;
@@ -37,7 +36,7 @@ public class RetrySample {
             }
             @Override
             public void onNext(Integer data) {
-                System.out.println(StringFormatter.format("data=%s", data).get());
+                System.out.println(String.format("data=%s", data));
             }
             @Override
             public void onError(Throwable t) {
